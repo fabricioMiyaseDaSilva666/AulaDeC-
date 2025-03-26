@@ -49,5 +49,121 @@ namespace exerciciosTint
             }//Fim do if
             return -1;//Pra termina a model, sempre tem que usa o return, NÃO outra coisa
         }//Fim do método
+        public string negativoPosZe(int num) 
+        {
+            if (num < 0) 
+            {
+                return "Esse número é negativo";
+            }
+            else if (num > 0) 
+            {
+                return "Esse número é positivo";
+            }
+            else 
+            {
+                return "Esse número é um zero";
+            }
+            
+        }//Fim do método
+        
+        public string tabuada(int tabu) 
+        {
+            string resposta = "";
+            for (int i = 0; i <= 10; i++) 
+            {
+                resposta +="\n" + tabu + " * " + i + " = " + (tabu * i);
+            }
+            return resposta;
+        }//Fim do método
+
+        public int fatorial(int fatorial) 
+        {
+            int i = fatorial - 1;
+            string resposta = "";
+            for (i = i; i >= 1; i--) 
+            {
+                fatorial += i * fatorial;
+            }
+            return fatorial;
+        }//Fim do método
+
+        
+        public string potenRaiz(int potencia1, int potencia2)
+        {
+            int potencia = potencia1 * potencia2;
+            double raiz = 0;
+            int metade = potencia / 2;
+            return "A potência desses dois números é: " + potencia + "\nA raiz dessa potência é: " + (raiz = Math.Sqrt(potencia)); 
+        }//Fim do método
+
+        public string parImp(int parImpar)
+        {
+            if (parImpar % 2 == 0)
+            {
+                return "Esse número é par!";
+            }
+            else
+            {
+                return "Esse número é impar!";
+            }
+        }//Fim do método
+
+        public string crescente(int cres1, int cres2)
+        {
+            string crescente1 = "";
+            string crescente2 = "";
+            for(int i = 0; i <= cres1; i++)
+            {
+                crescente1 += i;
+            }
+            for(int i2 = 0; i2 <= cres2; i2++)
+            {
+                crescente2 += i2;
+            }
+            return crescente1 + "\n" + crescente2; 
+        }//Fim do método
+
+        public string numMedia(int nume1, int nume2, int nume3, int nume4, int nume5)
+        {
+            double medias = 0;
+            medias = (nume1 + nume2 + nume3 + nume4 + nume5) / 5;
+            return "A media é" + medias;
+        }//Fim do método
+
+        public string vogaisContar(string vogais)
+        {
+            vogais = vogais.ToLower();
+            int contarVoga = 0;
+            string vogal = "aeiou";
+            foreach (char c in vogais)
+            {
+                if (vogal.Contains(c))
+                {
+                    contarVoga++;
+                }
+            }
+            return "Essa palavra tem " + contarVoga + " vogais";
+        }//Fim do método
+
+        public string palavraInver(string palavra)
+        {
+            char[] caracteres = palavra.ToCharArray();
+
+            Array.Reverse(caracteres);
+            string invertida = new string(caracteres);
+            return invertida;
+        }//Fim do método
+
+        public string primo(int numPrimo)
+        {
+            int numePrimo = int.Parse(Console.ReadLine());
+            static bool ePrimo(int n)
+            {
+                if (n < 2)
+                {
+                    return false;
+                }
+            }
+        }
     }//Fim da classe
 }//Fim do projeto
